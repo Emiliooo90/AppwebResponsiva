@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netwalker</title>
+    <!-- Link del archivo styles.css -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Link del framework Bootstrap v5.2.2-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!--
+    <div>Elemento navbar offcanvas, este contiene el menú
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Netwalker</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Soporte Interno</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Cerrar Adm.</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Servicios
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">Solicitudes</a></li>
+                        <hr class="dropdown-divider">
+                        <li><a class="dropdown-item" href="#">Mis Solicitudes</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Buscar Documento</a></li>
+                        <hr class="dropdown-divider">
+                        <li><a class="dropdown-item" href="#">Buscar Alumno</a></li>
+                        <hr class="dropdown-divider">
+                        <li><a class="dropdown-item">LEM</a></li>
+                        <hr class="dropdown-divider">
+                        <li><a class="dropdown-item">Informes</a></li>
+                        <hr class="dropdown-divider">
+                        <li><a class="dropdown-item">Configuración</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </div>
+    -->
+
+    <header>
+      <div class="wrap">
+        <div class="top-bar"></div>
+        <a class="logo" href="http://netwalker.cl"
+          ><img
+            src="http://netwalker.cl/skin/default/img/netwalker-logo.svg"
+            alt="Netwalker icon"
+        /></a>
+        <div
+          class="handler navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContentXL"
+          aria-controls="navbarSupportedContentXL"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <div class="hamburger-menu"></div>
+        </div>
+        <script type="text/javascript">
+          (function () {
+            $(".handler").on("click", function () {
+              $(".hamburger-menu").toggleClass("animate");
+              $("nav").toggleClass("show");
+            });
+          })();
+        </script>
+        <nav>
+          <ul>
+            <li><a href="#">Soporte Interno</a></li>
+            <li><a href="#">Cerrar Adm.</a></li>
+            <li><a class="btn dropdown-toggle" href="#">Menú</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container-md">
+      <!-- Elemento card, este contiene las etiquetas para buscar a un alumno -->
+      <div class="card">
+        <h5 class="card-header">Buscar Alumno</h5>
+        <div class="card-body">
+          <p class="card-text">
+            Puede buscar por R.U.N., apellido o usuario del alumno.
+          </p>
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label class="col-form-label">Solicitante:</label>
+            </div>
+            <div class="col-auto">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ej: Pérez"
+              />
+            </div>
+            <div class="col-auto">
+              <span class="form-text">
+                <button type="button" class="btn btn-danger">Buscar</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div class="container-md">
+      <div class="table-responsive">
+        <!-- Elemento tabla que contiene la información de cada usuario -->
+        <table class="table table-bordered border-dark">
+          <thead class="table-active">
+            <tr>
+              <th scope="col">R.U.N.</th>
+              <th scope="col">Usuario</th>
+              <th scope="col">Nombre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="#">10.023.193-K</a></td>
+              <td><a href="#">a.nejazperes</a></td>
+              <td>ABEL RIGOBERTO NEJAZ PEREZ</td>
+            </tr>
+            <tr>
+              <td><a href="#">10.050.622-K</a></td>
+              <td><a href="#">a.perezmarquez</a></td>
+              <td>ALEX HUMBERTO PEREZ MARQUEZ</td>
+            </tr>
+            <tr>
+              <td><a href="#">10.103.899-8</a></td>
+              <td><a href="#">r.perezpoblete</a></td>
+              <td>RICARDO ANTONIO PEREZ POBLETE</td>
+            </tr>
+            <tr>
+              <td><a href="#">10.305.957-7</a></td>
+              <td><a href="#">k.sierraperez</a></td>
+              <td>KARINA ROSELLA SIERRA PEREZ</td>
+            </tr>
+            <tr>
+              <td><a href="#">10.307.362-6</a></td>
+              <td><a href="#">a.vergaraperez</a></td>
+              <td>ALBERTO ANGEL VERGARA PEREZ</td>
+            </tr>
+            <tr>
+              <td><a href="#">10.319.047-9</a></td>
+              <td><a href="#">c.perezramirez</a></td>
+              <td>CLAUDIO ANDRES PEREZ RAMIREZ</td>
+            </tr>
+            <tr>
+              <td><a href="#">10.341.293-5</a></td>
+              <td><a href="#">g.perezvallejos</a></td>
+              <td>GUILLERMO DANIEL PEREZ VALLEJOS</td>
+            </tr>
+            <tr>
+              <td><a href="#">10.370.776-5</a></td>
+              <td><a href="#">P.GAYAN</a></td>
+              <td>PATRICIO GAYAN PEREZ</td>
+            </tr>
+            <tr>
+              <td><a href="#">10.377.533-7</a></td>
+              <td><a href="#">m.perezcontreras2</a></td>
+              <td>MARISOL ANDREA PEREZ CONTRERAS</td>
+            </tr>
+            <tr>
+              <td><a href="#">10.451.135-K</a></td>
+              <td><a href="#">g.bermejoperez</a></td>
+              <td>GONZALO BERNARDO BERMEJO PEREZ</td>
+            </tr>
+          </tbody>
+          <tfoot class="table-active">
+            <tr>
+              <td colspan="3">
+                Total: 1415 | Página 1 de 142 - <a href="#">Siguiente >></a>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+    <!-- Etiqueta script de JavaScript, es para cargar paquetes y para que funcionen los elementos que lo necesitan-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+  </body>
+</html>
