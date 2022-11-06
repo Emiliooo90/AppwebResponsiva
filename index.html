@@ -16,92 +16,68 @@
     />
   </head>
   <body>
-    <!--
-    <div>Elemento navbar offcanvas, este contiene el menú
-        <nav class="navbar navbar-dark bg-dark fixed-top">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Netwalker</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Soporte Interno</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Cerrar Adm.</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Servicios
-                      </a>
-                      <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="#">Solicitudes</a></li>
-                        <hr class="dropdown-divider">
-                        <li><a class="dropdown-item" href="#">Mis Solicitudes</a></li>
-                        <li>
-                          <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Buscar Documento</a></li>
-                        <hr class="dropdown-divider">
-                        <li><a class="dropdown-item" href="#">Buscar Alumno</a></li>
-                        <hr class="dropdown-divider">
-                        <li><a class="dropdown-item">LEM</a></li>
-                        <hr class="dropdown-divider">
-                        <li><a class="dropdown-item">Informes</a></li>
-                        <hr class="dropdown-divider">
-                        <li><a class="dropdown-item">Configuración</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </nav>
-    </div>
-    -->
-
-    <header>
-      <div class="wrap">
-        <div class="top-bar"></div>
-        <a class="logo" href="http://netwalker.cl"
+    <!-- Este es el navbar que contiene el menú y los otros servicios -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
           ><img
             src="http://netwalker.cl/skin/default/img/netwalker-logo.svg"
-            alt="Netwalker icon"
-        /></a>
-        <div
-          class="handler navbar-toggler"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContentXL"
-          aria-controls="navbarSupportedContentXL"
+            alt="Netwalker"
+            width="180px"
+        /></a> <!-- Puse este logo de Netwalker, ya que no pude encontrar la misma imagen que se encuentra en el pdf dde la postulación Desarrollo y Diseño Web-->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <div class="hamburger-menu"></div>
-        </div>
-        <script type="text/javascript">
-          (function () {
-            $(".handler").on("click", function () {
-              $(".hamburger-menu").toggleClass("animate");
-              $("nav").toggleClass("show");
-            });
-          })();
-        </script>
-        <nav>
-          <ul>
-            <li><a href="#">Soporte Interno</a></li>
-            <li><a href="#">Cerrar Adm.</a></li>
-            <li><a class="btn dropdown-toggle" href="#">Menú</a></li>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#"
+                >Soporte Interno</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cerrar Adm.</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Servicios
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Solicitudes</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Mis Solicitudes</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Buscar Documento</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item">Buscar Alumno</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item">LEM</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item">Informes</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item">Configuración</a></li>
+              </ul>
+            </li>
           </ul>
-        </nav>
+        </div>
       </div>
-    </header>
+    </nav>
 
     <div class="container-md">
       <!-- Elemento card, este contiene las etiquetas para buscar a un alumno -->
@@ -116,11 +92,7 @@
               <label class="col-form-label">Solicitante:</label>
             </div>
             <div class="col-auto">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Ej: Pérez"
-              />
+              <input type="text" class="form-control" placeholder="Ej: Pérez" />
             </div>
             <div class="col-auto">
               <span class="form-text">
@@ -212,14 +184,6 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
-    ></script>
-    <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
   </body>
 </html>
