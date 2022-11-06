@@ -19,12 +19,13 @@
     <!-- Este es el navbar que contiene el menú y los otros servicios -->
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="http://netwalker.cl"
           ><img
             src="http://netwalker.cl/skin/default/img/netwalker-logo.svg"
             alt="Netwalker"
             width="180px"
-        /></a> <!-- Puse este logo de Netwalker, ya que no pude encontrar la misma imagen que se encuentra en el pdf dde la postulación Desarrollo y Diseño Web-->
+        /></a>
+        <!-- Puse este logo de Netwalker, ya que no pude encontrar la misma imagen que se encuentra en el pdf dde la postulación Desarrollo y Diseño Web-->
         <button
           class="navbar-toggler"
           type="button"
@@ -39,12 +40,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#"
+              <a
+                id="texto"
+                class="nav-link"
+                aria-current="page"
+                href="#"
+                onmouseover="mouseOver()"
+                onmouseout="mouseOut()"
                 >Soporte Interno</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Cerrar Adm.</a>
+              <a
+                id="texto2"
+                class="nav-link"
+                href="#"
+                onmouseover="mouseOver2()"
+                onmouseout="mouseOut2()"
+                >Cerrar Adm.
+              </a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -185,5 +199,23 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      function mouseOver() {
+        document.getElementById("texto").style.color = "#0A77CD";
+      }
+
+      function mouseOut() {
+        document.getElementById("texto").style.color = "#757D83";
+      }
+
+      function mouseOver2() {
+        document.getElementById("texto2").style.color = "#0A77CD";
+      }
+
+      function mouseOut2() {
+        document.getElementById("texto2").style.color = "#757D83";
+      }
+    </script>
   </body>
 </html>
